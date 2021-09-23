@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="chengyi@192.168.0.240:18518" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true" showDifferentInSync="false">
+    <serverData>
+      <paths name="chengyi@192.168.0.240:18518">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data2/chengyi/assignment/AI_security_assignment1" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
