@@ -9,6 +9,7 @@
    * [Data augmentation](#data-augmentation)
    * [CNN Strcuture](#cnn-structure)
    * [Training](#training)
+   * [Result](#result)
 
 
 ## Validation errors
@@ -57,10 +58,9 @@ Lr-Batchsize | Highest Validation Acc | Lowest Validation Loss epoch
 </table>
 
 ## User's guide
-You can run cifar10_train.py and see how it works from the screen output (the code will download the data for you if you don't have it yet). It’s better to speicify version identifier before running, since the training logs, checkpoints, and error.csv file will be saved in the folder with name logs_$version. You can do this by command line: `python cifar10_train.py --version='test'`. You may also change the version number inside the hyper_parameters.py file
+You can run main.py. You can test its convergence by command line: `CUDA_VISIBLE_DEVICES=9 python3 main.py --download True --epoch 25 --lr 0.01 --batchsize 64 --numtrain 4900` and train model by command line `CUDA_VISIBLE_DEVICES=9 python3 main.py --epoch 25 --lr 0.001 --batchsize 64 --numtrain 49000` and adjust these parameters to train model on different parameter-set
 
-The training and validation error will be output on the screen. They can also be viewed using tensorboard. Use `tensorboard --logdir='logs_$version'` command to pull them out. (For e.g. If the version is ‘test’, the logdir should be ‘logs_test’.) 
-The relevant statistics of each layer can be found on tensorboard.  
+The saved tensorboard is saved at "LogDir", command line `tensorboard --logdir <LogDir>` is used to see the tensorboard curve.
 
 ### Pre-requisites
 tensorboardX(2.4), torchvision(0.2.1), pytorch(1.4.0)
@@ -75,7 +75,6 @@ train_model.py is responsible for training and validation.
 
 The following sections expain the codes in details.
 
--------------------------------------------------------------------------------------------------------------------------------------
 ### Hyper-parameters
 **lr**: float. The fixed learning rate for optimizer.
 
@@ -89,17 +88,12 @@ The following sections expain the codes in details.
 
 **momentum**: float. The fixed momentum for optimzer
 
------------------------------------------------------------------------------------------------------------------------------------
-
 ### Data augmentation
 **RandomCrop**: Randomly crop images "T.RandomCrop(32, padding=4)" to 32x32 with padding=4.
 
 **Normalize**: Normalize the input images for better performance.
 
 **RandomHorizontalFlip**: Randomly horizental flip each image to increase generalization.
-
------------------------------------------------------------------------------------------------------------------------------------
-
 
 ### CNN Structure
 Here I use 3 convolution layers and 3 full-connection layers
@@ -122,4 +116,9 @@ It is able to adjust --lr and --batchsize to training model on different Learnin
 CUDA_VISIBLE_DEVICES=9 python3 main.py --download True --epoch 25 --lr 0.01 --batchsize 64 
 ```
 
+### Result
+1. Larger batchsize leads slower non-converge point.
+2. Smaller learning rate has slower convergence and higher best-validation-acc.
+3. Large learning rate(lr=0.1 here) results in model misfit.
+4. Relatively large learning rate(0.01 here) leads INF after some layers which leads Nan in loss, by replacing INF to 80 and Nan to 0, the best-validation-acc increases slightly.
    
