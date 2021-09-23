@@ -26,7 +26,7 @@ Lr-Batchsize | Highest Validation Acc | Lowest Validation Loss epoch
 0.01-32(nan-inf) | 72.7% | 2
 
 ## Training curves
-![alt tag](https://github.com/wenxinxu/resnet-in-tensorflow/blob/master/train_curve2.png)
+![text] (图片链接地址)
 
 ## User's guide
 You can run cifar10_train.py and see how it works from the screen output (the code will download the data for you if you don't have it yet). It’s better to speicify version identifier before running, since the training logs, checkpoints, and error.csv file will be saved in the folder with name logs_$version. You can do this by command line: `python cifar10_train.py --version='test'`. You may also change the version number inside the hyper_parameters.py file
