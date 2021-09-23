@@ -26,7 +26,14 @@ Lr-Batchsize | Highest Validation Acc | Lowest Validation Loss epoch
 0.01-32(nan-inf) | 72.7% | 2
 
 ## Training curves
-![text] (图片链接地址)
+![](../mytensorboard/Fig/lr01bs64.png)
+![lr001bs16.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs16.png)
+![lr001bs32.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs32.png)
+![lr001bs64.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs64.png)
+![lr0001bs16.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr0001bs16.png)
+![lr0001bs32.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr0001bs32.png)
+![lr0001bs64.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr0001bs64.png)
+![lr001bs32naninf.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs32naninf.png)
 
 ## User's guide
 You can run cifar10_train.py and see how it works from the screen output (the code will download the data for you if you don't have it yet). It’s better to speicify version identifier before running, since the training logs, checkpoints, and error.csv file will be saved in the folder with name logs_$version. You can do this by command line: `python cifar10_train.py --version='test'`. You may also change the version number inside the hyper_parameters.py file
