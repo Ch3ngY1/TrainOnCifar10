@@ -119,4 +119,5 @@ CUDA_VISIBLE_DEVICES=9 python3 main.py --download True --epoch 25 --lr 0.01 --ba
 2. Smaller learning rate has slower convergence and higher best-validation-acc.
 3. Large learning rate(lr=0.1 here) results in model misfit.
 4. Relatively large learning rate(0.01 here) leads INF after some layers which leads Nan in loss, by replacing INF to 80 and Nan to 0, the best-validation-acc increases slightly.
+5. After some epoch, model is overfit and the loss of validation set increases.
    
