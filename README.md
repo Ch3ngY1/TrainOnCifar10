@@ -26,15 +26,35 @@ Lr-Batchsize | Highest Validation Acc | Lowest Validation Loss epoch
 0.001-64 | 79.5% | 10
 
 ## Training curves
+<table>
+    <tr>
+            <th>lr=0.01,batchsize=32,naninf</th>
+            <th>lr=0.01,batchsize=16</th>
+            <th>lr=0.01,batchsize=32</th>
+            <th>lr=0.01,batchsize=64</th>
+    </tr>
+    <tr>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs32naninf.png width=100% /></td>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs16.png width=100% /></td>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs32.png width=100% /></td>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs64.png width=100% /></td>
+    </tr>
+</table>
 
-<img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr01bs64.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs32naninf.png width=20% />
-lr01bs64 lr001bs32naninf 
-
-<img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs16.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs32.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs64.png width=20% />
-lr001bs16 lr001bs32 lr001bs64
- 
-<img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs16.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs32.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs64.png width=20% />
-lr0001bs16 lr0001bs32 lr0001bs64
+<table>
+    <tr>
+            <th>lr=0.1,batchsize=64</th>
+            <th>lr=0.001,batchsize=16</th>
+            <th>lr=0.001,batchsize=32</th>
+            <th>lr=0.001,batchsize=64</th>
+    </tr>
+    <tr>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr01bs64.png width=100% /></td>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs16.png width=100% /></td>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs32.png width=100% /></td>
+        <td><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs64.png width=100% /></td>
+    </tr>
+</table>
 
 ## User's guide
 You can run cifar10_train.py and see how it works from the screen output (the code will download the data for you if you don't have it yet). It’s better to speicify version identifier before running, since the training logs, checkpoints, and error.csv file will be saved in the folder with name logs_$version. You can do this by command line: `python cifar10_train.py --version='test'`. You may also change the version number inside the hyper_parameters.py file
