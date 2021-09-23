@@ -17,23 +17,24 @@ The highest validation accuracy of different LearningRate-BatchSize sets respect
 Lr-Batchsize | Highest Validation Acc | Lowest Validation Loss epoch
 ------- | ----------------------- | -----------------------
 0.1-64 | 11.9% | 5
+0.01-32(nan-inf) | 72.7% | 2
 0.01-16 | 55.4% | 1
 0.01-32 | 72% | 2
 0.01-64 | 79.2% | 3
 0.001-16 | 78.68% | 6
 0.001-32 | 78.5% | 7
 0.001-64 | 79.5% | 10
-0.01-32(nan-inf) | 72.7% | 2
 
 ## Training curves
-![](../mytensorboard/Fig/lr01bs64.png)
-![lr001bs16.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs16.png)
-![lr001bs32.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs32.png)
-![lr001bs64.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs64.png)
-![lr0001bs16.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr0001bs16.png)
-![lr0001bs32.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr0001bs32.png)
-![lr0001bs64.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr0001bs64.png)
-![lr001bs32naninf.png](https://github.com/Ch3ngY1/TrainOnCifar10/mytensorboard/Fig/lr001bs32naninf.png)
+
+<img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr01bs64.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs32naninf.png width=20% />
+lr01bs64 lr001bs32naninf 
+
+<img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs16.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs32.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr001bs64.png width=20% />
+lr001bs16 lr001bs32 lr001bs64
+ 
+<img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs16.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs32.png width=20% /><img src=https://github.com/Ch3ngY1/TrainOnCifar10/blob/master/mytensorboard/Fig/lr0001bs64.png width=20% />
+lr0001bs16 lr0001bs32 lr0001bs64
 
 ## User's guide
 You can run cifar10_train.py and see how it works from the screen output (the code will download the data for you if you don't have it yet). It’s better to speicify version identifier before running, since the training logs, checkpoints, and error.csv file will be saved in the folder with name logs_$version. You can do this by command line: `python cifar10_train.py --version='test'`. You may also change the version number inside the hyper_parameters.py file
