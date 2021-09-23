@@ -73,8 +73,6 @@ CNN.py defines CNN architecture.
 check_accuracy.py is responsible for calculate accuracy and valiation loss.
 train_model.py is responsible for training and validation. 
 
-The following sections expain the codes in details.
-
 ### Hyper-parameters
 **lr**: float. The fixed learning rate for optimizer.
 
