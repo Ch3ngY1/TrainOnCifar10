@@ -15,7 +15,7 @@
 ## Validation errors
 The highest validation accuracy of different LearningRate-BatchSize sets respectively. 
 
-Lr-Batchsize | Highest Validation Acc | Lowest Validation Loss epoch
+Lr-Batchsize | Highest Validation Acc | Lowest-Validation-Loss epoch
 ------- | ----------------------- | -----------------------
 0.1-64 | 11.9% | 5
 0.01-32(nan-inf) | 72.7% | 2
