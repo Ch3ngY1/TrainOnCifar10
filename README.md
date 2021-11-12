@@ -24,7 +24,7 @@ Lr-Batchsize | Highest Validation Acc | Lowest-Validation-Loss epoch
 0.01-64 | 79.2% | 3
 0.001-16 | 78.68% | 6
 0.001-32 | 78.5% | 7
-0.001-64 | 79.5% | 10
+0.001-64 | **79.5%** | 10
 
 ## Training curves
 <table>
